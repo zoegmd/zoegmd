@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zoe's Personal Page</title>
+    <style>
+        body { 
+            font-family: 'Arial', sans-serif; 
+            background-color: #F9F9F9; 
+            color: #333; 
+            margin: 0; 
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #FF7DFF;
+            color: white;
+            padding: 20px;
+            border-radius: 15px 15px 0 0;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #FF7DFF;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .footer {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-top: 40px;
+            border-top: 2px solid #FF7DFF;
+            padding-top: 10px;
+        }
+
+        .button {
+            padding: 12px 25px;
+            background-color: #FF7DFF;
+            color: white;
+            font-size: 1.1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 15px;
+        }
+
+        .button:hover {
+            background-color: #FF33FF;
+        }
+
+        .emoji {
+            font-size: 1.5em;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .section ul li {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 8px;
+            margin: 5px 0;
+        }
+
+        #projects {
+            margin-top: 50px;
+        }
+
+        #projects ul {
+            text-align: left;
+        }
+
+        #projects li {
+            margin-bottom: 10px;
+        }
+
+        .discord-response {
+            display: none;
+            color: red;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
+        .links a {
+            display: block;
+            margin-top: 10px;
+            color: #FF7DFF;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #FF33FF;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            Zoe's Personal Page
+        </div>
+
+        <div class="section">
+            <h2>Who Am I?</h2>
+            <p><strong>Name:</strong> Zoe</p>
+            <p><strong>Age:</strong> Not saying, but I'm a minor !!</p>
+            <p><strong>Gender:</strong> Trans Female</p>
+            <p><strong>Pronouns:</strong> She/Her</p>
+            <p><strong>Sexual Orientation:</strong> Bisexual <span class="emoji">:3</span></p>
+        </div>
+
+        <div class="section">
+            <h2>My Interests</h2>
+            <ul>
+                <li>Coding</li>
+                <li>Geometry Dash Player</li>
+                <li>Creating cool stuff!</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>About Me</h2>
+            <p>Hey there! I'm Zoe, a passionate coder and Geometry Dash enthusiast. I love creating things and challenging myself with new projects. I'm all about exploring the world of tech and having fun while doing it!</p>
+            <button class="button" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">Check Out My Projects!</button>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>Projects:</h2>
+            <ul>
+                <li><strong>OneShot Item Viewer (DISCONTINUED)</strong> - <a href="https://oneshotviewer.vercel.app" target="_blank">https://oneshotviewer.vercel.app</a></li>
+                <li><strong>The Wraith (DISCONTINUED)</strong> - <a href="https://thewraith.vercel.app" target="_blank">https://thewraith.vercel.app</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <button class="button" id="discordButton" onclick="joinDiscord()">Join the Discord!</button>
+            <div id="discordResponse" class="discord-response">
+                I don't have one.
+            </div>
+        </div>
+
+        <div class="section links">
+            <h2>Other Links:</h2>
+            <a href="https://x.com/zoegmd" target="_blank">Follow me on Twitter</a>
+            <a href="https://gdbrowser.com/u/zoegmd" target="_blank">Check my GD Profile!</a>
+        </div>
+
+        <div class="footer">
+            <p>Made with 💻 by Zoe | 2025</p>
+        </div>
+    </div>
+
+    <script>
+        function joinDiscord() {
+            const discordButton = document.getElementById('discordButton');
+            const discordResponse = document.getElementById('discordResponse');
+
+            discordButton.style.display = 'none';
+            discordResponse.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
+
